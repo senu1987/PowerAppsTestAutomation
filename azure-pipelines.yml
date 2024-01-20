@@ -76,3 +76,14 @@ jobs:
       TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(LocalProjectName)\$(TestUrlFileName)
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
+
+  trigger:
+  - main
+
+  schedules:
+  - cron: "40 18 * * 6"
+    displayName: Saturday Build
+    branches:
+      include:
+      - main
+    always: true
