@@ -77,14 +77,4 @@ jobs:
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
 
-trigger:
-- master
 
-schedules:
-- cron: "* 60 * 4 1-2"
-  always: false
-  displayName: Saturday Build
-  branches:
-      include:
-      - master
-  
