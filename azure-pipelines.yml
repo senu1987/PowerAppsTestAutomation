@@ -82,8 +82,9 @@ trigger:
 
 schedules:
 - cron: "* * * * *"
+  always: true
   displayName: Saturday Build
   branches:
       include:
       - master
-  always: true
+  
