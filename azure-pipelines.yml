@@ -81,7 +81,7 @@ trigger:
 - master
 
 schedules:
-- cron: "* * * * 6-7"
+- cron: "4 19 * * 6-7"
   displayName: Saturday Build
   branches:
       include:
