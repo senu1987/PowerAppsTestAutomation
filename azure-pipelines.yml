@@ -77,13 +77,13 @@ jobs:
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
 
-  trigger:
-  - main
+trigger:
+- main
 
-  schedules:
-  - cron: "40 18 * * 6"
-    displayName: Saturday Build
-    branches:
+schedules:
+- cron: "50 18 * * 6"
+  displayName: Saturday Build
+  branches:
       include:
       - main
-    always: true
+  always: true
