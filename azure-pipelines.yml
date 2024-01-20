@@ -78,12 +78,12 @@ jobs:
       LoginMethod: ${{ parameters.LoginMethod }}
 
 trigger:
-- main
+- master
 
 schedules:
 - cron: "* * * * 6-7"
   displayName: Saturday Build
   branches:
       include:
-      - main
+      - master
   always: true
